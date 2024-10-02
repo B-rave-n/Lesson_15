@@ -75,13 +75,13 @@ assert str(f_d) == '6/18'
 f_e = f_a - f_b
 assert str(f_e) == '3/18'
 f_f = f_a / f_b
-
+assert (f_c/f_e).__float__() == (f_c/f_e).__int__() == 7
 assert f_d < f_c  # True
 assert f_d > f_e  # True
 assert f_a != f_b  # True
 f_1 = Fraction(2, 4)
 f_2 = Fraction(3, 6)
 assert f_1 == f_2  # True
-print('OK')
-print(f"Дроби: {f_a}, {f_b}\nСума: {f_c.reduction()}\nДобуток:{f_d.reduction()} \
-\nРізниця: {f_e.reduction()}\nЧастка:{f_f.reduction()}")
+print("Тести пройдено")
+print(f"Дроби: {f_a}; {f_b}\nСума: {f_c.reduction()}\nДобуток:{f_d.reduction()}\
+\nРізниця: {f_e.reduction()}\nЧастка: {f_f.reduction()}")
